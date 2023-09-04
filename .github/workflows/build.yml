@@ -9,4 +9,4 @@ jobs:
             - name: restore
               run: dotnet restore "./aspnet-get-started/aspnet-get-started.csproj"
             - name: build
-              run: dotnet build "./aspnet-getstarted/aspnet-get-started.csproj"
+              run: dotnet build "aspnet-get-started/aspnet-get-started.csproj"
