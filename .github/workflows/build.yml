@@ -8,3 +8,5 @@ jobs:
               uses: "actions/checkout@v3"
             - name: restore
               run: dotnet restore "./aspnet-get-started/aspnet-get-started.csproj"
+            - name: build
+              run: dotnet build "./aspnet-getstarted/aspnet-get-started.csproj"
