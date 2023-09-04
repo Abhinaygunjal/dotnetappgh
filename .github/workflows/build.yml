@@ -4,9 +4,12 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout
-              uses: "actions/checkout@v3"
-            - name: restore
-              run: dotnet restore "aspnet-get-started/aspnet-get-started.csproj"
-            - name: build
-              run: dotnet build "aspnet-get-started/aspnet-get-started.csproj"
+          - uses: actions/checkout@v3
+          - name: Setup .NET
+            uses: actions/setup-dotnet@v3
+            with:
+              dotnet-version: 4.8.x
+          - name: Restore dependencies
+            run: dotnet restore
+          - name: Build
+            run: dotnet build --no-restore
