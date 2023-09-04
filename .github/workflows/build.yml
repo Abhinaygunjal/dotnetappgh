@@ -7,6 +7,6 @@ jobs:
             - name: checkout
               uses: "actions/checkout@v3"
             - name: restore
-              run: dotnet restore "./aspnet-get-started/aspnet-get-started.csproj"
+              run: dotnet restore "aspnet-get-started/aspnet-get-started.csproj"
             - name: build
               run: dotnet build "aspnet-get-started/aspnet-get-started.csproj"
