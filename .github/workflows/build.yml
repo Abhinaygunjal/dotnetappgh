@@ -6,6 +6,6 @@ jobs:
         steps:
           - uses: actions/checkout@v3
           - name: Restore dependencies
-            run: dotnet restore aspnet-get-started/aspnet-get-started.csproj
+            run: dotnet restore aspnet-get-started/packages.config
           - name: Build
             run: dotnet build --no-restore
